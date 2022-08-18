@@ -1,6 +1,7 @@
 public class Robot {
     private boolean isRobot;
-    private RobotPosition robotPosition;
+    public RobotPosition robotPosition;
+    public Directions robotDirection;
 
     public Robot() {
         this.isRobot=true;
@@ -11,9 +12,16 @@ public class Robot {
         this.robotPosition= new RobotPosition(x,y);
     }
 
+    public Robot(int x, int y,Directions directions) {
+        this.isRobot=true;
+        this.robotPosition= new RobotPosition(x,y);
+        this.robotDirection= directions;
+    }
+
     public boolean checkIfRobot() {
         if(this.isRobot==true)
             return true;
         return false;
     }
+
 }
